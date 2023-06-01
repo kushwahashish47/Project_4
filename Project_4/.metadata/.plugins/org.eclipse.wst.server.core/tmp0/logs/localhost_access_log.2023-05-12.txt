@@ -1,0 +1,2 @@
+0:0:0:0:0:0:0:1 - - [12/May/2023:00:09:06 +0530] "POST /Project_4/ForgetPasswordCtl HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [12/May/2023:00:09:06 +0530] "GET /Project_4/ForgetPasswordCtl HTTP/1.1" 200 2365
