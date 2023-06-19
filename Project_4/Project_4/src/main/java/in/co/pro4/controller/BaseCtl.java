@@ -128,7 +128,7 @@ public abstract class BaseCtl extends HttpServlet {
 		String op = DataUtility.getString(request.getParameter("operation"));
 
 		if (DataValidator.isNotNull(op) && !OP_CANCEL.equalsIgnoreCase(op) && !OP_VIEW.equalsIgnoreCase(op)
-				&& !OP_DELETE.equalsIgnoreCase(op) && !OP_RESET.equalsIgnoreCase(op)) {                     //YE SAB NOT NULL KI CONDITION HAI
+				&& !OP_DELETE.equalsIgnoreCase(op) && !OP_RESET.equalsIgnoreCase(op)) {     
 																											//MEANS NULL MILA TO YE LOOP SKIP KA
 			if (!validate(request)) {
 				
