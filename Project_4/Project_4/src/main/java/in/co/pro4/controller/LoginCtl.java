@@ -58,16 +58,13 @@ public class LoginCtl extends BaseCtl {
 		String login = request.getParameter("login");
 
 		if (DataValidator.isNull(login)) {
-			// System.out.println("loginctl id null");
 			request.setAttribute("login", PropertyReader.getValue("error.require", "Login ID "));
 			pass = false;
 		} else if (!DataValidator.isEmail(login)) {
-			// System.out.println("loginctl id not email");
 			request.setAttribute("login", PropertyReader.getValue("error.email", "Login "));
 			pass = false;
 		}
 		if (DataValidator.isNull(request.getParameter("password"))) {
-			// System.out.println("loginctl password");
 			request.setAttribute("password", PropertyReader.getValue("error.require", "Password "));
 			pass = false;
 		}
@@ -115,14 +112,13 @@ public class LoginCtl extends BaseCtl {
 		String op = DataUtility.getString(request.getParameter("operation"));
 
 		if (OP_LOG_OUT.equals(op) && !OP_SIGN_IN.equals(op)) {
-			// System.out.println("Do log out chal rha h");
 
 			session.invalidate();
 			ServletUtility.setSuccessMessage("User Logout Succesfully", request);
 			ServletUtility.forward(getView(), request, response);
 			return;
 		}
-		// System.out.println("Do get chalega");
+	
 		ServletUtility.forward(getView(), request, response);
 
 	}
@@ -151,7 +147,6 @@ public class LoginCtl extends BaseCtl {
 		if (OP_SIGN_IN.equalsIgnoreCase(op)) {
 
 			UserBean bean = (UserBean) populateBean(request);
-			System.out.println("populate hua");
 			try {
 				bean = model.authenticate(bean.getLogIn(), bean.getPassword());
 				String uri = request.getParameter("URI");
@@ -180,7 +175,7 @@ public class LoginCtl extends BaseCtl {
 					bean = (UserBean) populateBean(request);
 					ServletUtility.setBean(bean, request);
 					ServletUtility.setErrorMessage("Invalid LoginId And Password", request);
-					System.out.println("invalid msg");
+					
 				}
 			} catch (ApplicationException e) {
 				log.error(e);
@@ -194,7 +189,7 @@ public class LoginCtl extends BaseCtl {
 			return;
 
 		}
-		System.out.println("authenticate karke view par aaye");
+	
 		ServletUtility.forward(getView(), request, response);
 		
 		log.debug("UserCtl Method doPost Ended");
