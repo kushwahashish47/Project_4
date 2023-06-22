@@ -193,7 +193,7 @@ public class UserListCtl extends BaseCtl {
 		}
 		if (list == null || list.size() == 0 && !OP_DELETE.equalsIgnoreCase(op)) {
 			ServletUtility.setErrorMessage("No record found ", request);
-			System.out.println("dopost chali");
+		
 		}
 		ServletUtility.setList(list, request);
 		ServletUtility.setBean(bean, request);
