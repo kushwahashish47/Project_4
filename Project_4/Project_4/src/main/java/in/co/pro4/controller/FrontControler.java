@@ -44,7 +44,6 @@ public class FrontControler implements Filter {
 
 			req.setAttribute("uri", str);
 			ServletUtility.forward(ORSView.LOGIN_VIEW, req, resp);
-			System.out.println("ye chali iss view aaya authenticate karke");
 			return;
 		} else {
 			chain.doFilter(req, resp);
