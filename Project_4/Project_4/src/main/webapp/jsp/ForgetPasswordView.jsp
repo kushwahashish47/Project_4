@@ -18,7 +18,7 @@
 
 
 			<div align="center">
-				<h1 align="center">Forgot your password ?</h1>
+				<h1 align="center">Forgot your password ?1</h1>
 				<lable>Submit your Email address and we'll send your password.</lable>
 				<br> <br>
 
