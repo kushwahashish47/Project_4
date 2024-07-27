@@ -16,7 +16,7 @@
 	<%
 		UserBean userBean = (UserBean) session.getAttribute("user");
 		boolean userLoggedIn = userBean != null;
-		String welcomeMsg = "Hi, ";
+		String welcomeMsg = "Hello1, ";
 		if (userLoggedIn) {
 			String role = (String) session.getAttribute("role");
 			welcomeMsg += userBean.getFirstName() + " (" + role + ")";
