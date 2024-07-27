@@ -13,14 +13,14 @@
 	width: 100%;
 	bottom: 0;
 	background-color: white;
-	color: black;
+	color: rgb(247, 129, 129);
 	text-align: center;
 }
 </style>
 <body>
 	<div class="footer">
 		<hr>
-		<h3>&copy; Copyrights RAYS Technologies</h3>
+		<h3>&copy; Copyrights NCS1</h3>
 	</div>
 
 </body>
